@@ -1,3 +1,6 @@
+/* My first ever project, a Criminal Database Management System
+in C++, back in 12th grade. Warning: Really primitive code ahead :P */
+
 #include<ctype.h>
 #include<conio.h>
 #include<fstream.h>
