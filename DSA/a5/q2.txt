@@ -1,0 +1,21 @@
+
+	
+	We are given a BST. For it to be AVL, it should have an additional property of being height balanced (diff. b/w right and left subtrees = 1;left and right tree also balanced). So, we perform the following algorithm (balanced function).
+	
+	checkIfBalanced( Node * root)
+	
+	{
+		
+			declare lh,rh (heights of left and right subtrees).
+			
+			if root is empty return true (empty tree means balanced)
+			
+			lh = height(root->left)
+			rh = height(root->right)  (height of left and right trees)
+			
+			if abs(rh-lh) ==1 AND checkIfBalanced(root->left) AND checkIfBalanced(root->right) ) return true
+			
+			(recursively checks heights of all possible left and right subtree pairs and checks if difference =1)
+	}
+	
+	So, we find if the given BST is AVL or not.

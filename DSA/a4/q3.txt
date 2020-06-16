@@ -1,0 +1,16 @@
+
+
+		In linear search, since there are  at max t keys (t=2*n -1), if we implement linear search - 
+		
+		time complexity = O(no. of items)
+				    = O(2n-1)
+				    =O(n)
+				    
+		In bin. search, - 
+		
+		time complexity = O(log(no. of items)
+				    = O(log(2n-1))
+				    = O(log(n))
+				    
+				    
+		Here, t=2t-1, but if t was f(n), in bin. search, TC = O(log(f(n)) = O(log(n)). So, independant of how t is chosen.

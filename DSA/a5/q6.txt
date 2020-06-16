@@ -1,0 +1,20 @@
+
+
+-------->		For O(nlogn) case - 
+			
+			We can travel the given BST in O(n) time and insert it into an empty AVL tree with overall time complexity O(n * logn).
+			
+-------->		For O(n) - best case -
+		
+			We know that an inorder traversal of a BST will give a sorted array. So, we traverse the given BST in and store in an array which takes O(n) time.
+			
+			Now, from this sorted array, to create a balanced BST (AVL) tree, we perform the following algo which also takes O(n) time, making our overall time O(n).
+			
+			1) Make middle of current array as root.
+			
+			2) Recursively do the same for the left and right halves.
+				
+				(i) Make middle of left half as left child of root (step 1).
+				(ii) Make middle of right half as right child of root (step 1).
+				
+				

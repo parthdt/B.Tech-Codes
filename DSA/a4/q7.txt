@@ -1,0 +1,9 @@
+
+
+		Most 18-2 problems are already given in main assignment.
+		
+		18-2-4 isnt given - 
+		
+		After inserting n continous node (1.2.3...n), we shall have - 
+		
+		No. of nodes is in closed set - [(n-floor(log(n+1))),n-1]  (n>2).

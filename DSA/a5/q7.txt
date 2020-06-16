@@ -1,0 +1,42 @@
+
+ 	Traversal - 
+ 	
+ 	struct Node* leftMost(struct Node *n) 
+	{ 
+		if (n == NULL) 
+			return NULL; 
+  
+		while (n->left != NULL) 
+			n = n->left; 
+
+		return n; 
+	} 
+  
+	void traversal(struct Node *root) 
+	{ 
+		struct Node *cur = leftmost(root); 
+		while (cur != NULL) 
+		{ 
+        		printf("%d ", cur->data); 
+  
+       		 if (cur->rightThread) 
+      		      cur = cur->rightThread; 
+        		 else cur = leftmost(cur->right); 
+    		}	 
+	}
+	
+	Insertion - 
+	
+	Three cases - 
+	
+	1) Empty Tree - Set root as the node to be inserted (say nd) and nd's left and right as null.
+	
+	2) Left Child - nd's left child is parent's left and nd's right child is parent (threading). Similarly, parent's left is nd and its leftthread is 0/null.
+	
+	3) Right Child - nd's left child is parent (threading) and nd's right child is parent's right. Similarly, parent's right is nd and its rightthread is 0/null.
+	 
+	
+	
+	
+
+			

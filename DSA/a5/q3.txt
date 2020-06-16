@@ -1,0 +1,33 @@
+
+	We are given a height h. Therefore to construct an AVL tree with minumun no. of nodes, we first find out the minumum number of nodes required.
+	
+	Therefore, to find min. nodes, we assume that the left and right subtree both have min. possible nodes. Also, difference can be one.
+	
+	Therfore, if n(h) is min nodes of left subtree, n(h-1) is min nodes of right subtree. Therefore, at height h, total nodes(minimum are - 
+	
+	n(h+1) =n(h) + n(h-1) + 1 (the extra one for the root).
+	
+	Which simplifies to - 
+	
+	n(h) =n(h-1) + n(h-2) + 1
+	
+	Base n(h)'s - n(0) =1, n(1)=2, n(2) = 4.
+	
+	Now that we have the no. of nodes, we run a loop with parameter as no. of nodes that adds a node for each child of that node (recursively) and hence an AVL tree of height h with min. nodes is created.
+	
+	
+	
+	
+	WORST CASE POSSIBLE HEIGHT = (root 2) log(n) where n is no. of nodes,
+				    = 1.44 log (n) .
+				    
+	From above formula, n(h) + 1 = n(h-1) + n(h-2) 
+	
+	RHS is fibonacci seq.
+	
+	=> n(h) + 1 = (((1 + root(5))/2)^h+3)/root(5)
+	
+	 
+	taking log and simplifying we get h = 1.44 log(n)		  	
+				    	
+				 

@@ -1,0 +1,10 @@
+
+
+		TO FIND MINIMUM - 
+		
+		Keep going to the left element of current node recursively till last node (next left is NULL) and then the minimum of the values in this node is the final minimum value of the B-tree.
+		
+		TO FIND PREDECESSOR - 
+		
+		The traversal of B-tree using an inorder type traversal will do the trick. Since we'll first print predecessor's elements, then go to succesor and print those,
+		so we can store the elements in an array, and the elements just before the key given which arent in that node, are its predecessors.

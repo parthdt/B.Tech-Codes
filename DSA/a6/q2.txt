@@ -1,0 +1,16 @@
+
+
+		1 million entries per year, and then cleared after 5 years.
+		
+		Therefore max entries about 5 million.
+		
+		Thus size of hash table at least 5 million. But, to avoid clustering, size suggested is a bit bigger - say 6 million.
+		
+		
+		The performance may have degraded because clustering of all data might have happened (as mentioned earlier). Hence, a lot of time is taked for finding the 			hash value.
+		
+		2 milliseconds to copy one item is a slow method as if there are 5 million entries, it will take 2 milliseconds * 5 million seconds.
+		
+		That comes down to about 2.78 hours, which is a pretty long time.
+		
+		A better alternative would be to provide a hash function that uses double/triple probing to avoid clustering. This method takes a lot of space though.

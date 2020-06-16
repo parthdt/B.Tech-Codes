@@ -1,0 +1,93 @@
+
+
+		This function is not ideal as it involves a lot of collisions. i.e., a lot of elements will have same hash value.
+		
+		New hash function  - (x)mod13- x is sum of character values.
+		Hash table size 13.
+		
+		1) COMPUTER
+		
+		Sum =103, Address = 12.
+		
+		_ , _ , _ , _ , _ , _ , _ , _ , _ , _ , _ , _ , Computer
+		0   1   2   3   4   5   6   7   8   9   10  11  12
+		
+		2)SCIENCE
+		
+		Sum = 51, Address = 12.
+		Next address = 0.
+		Science , _ , _ , _ , _ , _ , _ , _ , _ , _ , _ , _ , Computer
+		   0      1   2   3   4   5   6   7   8   9   10  11   12
+		
+		3) IN
+		
+		Sum = 21, address = 8
+		
+		4) BIRMINGHAM
+		
+		Sum = 84, address = 6
+		
+		5) DATES
+		
+		Sum = 44, address = 5
+		
+		6) BACK
+		
+		Sum = 13, address = 0
+		next avl address - 1
+
+		7) TO
+		
+		Sum = 33, address = 7
+		
+		8) THE
+		
+		Sum = 30, address = 4
+		
+		9) SIXTIES
+		
+		Sum = 98, address = 7
+		next avl address - 9
+		
+		
+		
+		Therefore, final table - 
+		
+		{science, Back, _ , _ , the, dates, birmingham, to, in, sixties, _ , _ ,computer}
+		    0      1    2   3    4     5       6        7   8      9     10  11    12
+		    
+		    
+	The Load Factor = 9/13 = 0.692
+	Collisions = 4. ( if collisions for sixties counted as 2)
+			 3. (one collsion for sixties).
+			 
+	No. of comparisions for - 
+	
+	Teaching - Sum = 59, address = 7->8->9->empty. Therefore effort = 4.
+	
+	Research - Sum = 69. address = 4->5->6->7->8->9->empty. Therefore effort = 7.
+	
+	Admin - Sum = 36. address = 10. effort = 1.
+	
+	(NOTE - CHECKING FOR EMPTY INCLUDED IN EFFORTS. IF IT IS NOT TO BE COUNTED, THEN EFFORTS DECREASE BY 1 (3,6,0)).
+	
+	IF CHAINING IS USED INSTEAD OF LINEAR PROBING ------>>
+	
+	{back, _ , _ , _ , the, dates, birmingham,    to    , in, _ , _ , _ ,computer}
+								  Sixties			   science
+	    0      1    2   3    4     5       6      7       8   9  10   11    12
+	    
+	    
+	    Now, effort - 
+	    
+	    1) teaching - address = 7. Therefore - effort = 2.
+	    
+	    2) research - address = 4. Therefore - effort = 1.
+	    
+	    3) admin - address = 10. Therefore - effort = 0.
+		
+	 
+		
+		
+		
+		
